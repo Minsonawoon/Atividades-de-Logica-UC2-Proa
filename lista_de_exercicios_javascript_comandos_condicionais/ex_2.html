@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comandos Condicionais - Ex 2</title>
+</head>
+<body>
+    <!--2- Escreva um programa em Javascript, que leia um número e informe se ele é divisível por 10, por 5 ou por 2 ou se não é divisível por nenhum deles.-->
+    <h1>Número divisível por 10, 5 ou 2</h1>
+    <script>
+        let numero = prompt("Digite um número para verificar se ele é divisível por 10, 5 ou 2")
+
+        if ((numero % 10 == 0 && numero % 5 == 0) || (numero % 2 == 0)) {
+            document.write("Este número é divisível por 10, por 5 ou 2")
+        } else {
+            document.write("Este número não é divisível por nenhum deles!")
+        }
+    </script>
+    
+</body>
+</html>

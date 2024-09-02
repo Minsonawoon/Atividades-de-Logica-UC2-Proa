@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comandos Condicionais - Ex 5</title>
+</head>
+<body>
+    <!--5- Crie um programa em javascript que leia a idade de uma pessoa e informe a sua classe eleitoral: 
+    • não eleitor (abaixo de 16 anos); 
+    • eleitor obrigatório (entre a faixa de 18 e menor de 65 anos);
+    • eleitor facultativo (de 16 até 18 anos e maior de 65 anos, inclusive).-->
+
+    <h1>Votação</h1>
+    <script>
+    
+    let idade = parseInt(prompt("Infome a sua idade: "))
+
+    if (idade >= 18 && idade <= 65){
+        document.write("eleitor obrigatório (entre a faixa de 18 e menor de 65 anos)")
+    } else if ((idade >= 16 && idade < 18 ) || (idade > 65)){
+        document.write("eleitor facultativo (de 16 até 17 anos e maior de 65 anos)")
+    } else {
+        document.write("Não eleitor (abaixo de 16 anos)")
+    }
+    </script>
+</body>
+</html>

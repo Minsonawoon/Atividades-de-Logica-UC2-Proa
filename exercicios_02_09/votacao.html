@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votação</title>
+</head>
+<body>
+    <h1>Votação</h1>
+
+    <script>
+        let idade = parseInt(prompt("Infome a sua idade"))
+
+        if (idade >= 18 && idade <= 69){
+            document.write("Voto obrigatório, ou justificativa")
+        } else if ((idade >= 16 && idade < 18 ) || (idade >= 70)){
+            document.write("Voto opcional")
+        } else {
+            document.write("Não pode votar")
+        }
+    </script>
+</body>
+</html>

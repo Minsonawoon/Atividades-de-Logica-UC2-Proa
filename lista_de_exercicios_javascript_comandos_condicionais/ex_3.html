@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comandos Condicionais - Ex 3</title>
+</head>
+<body>
+    <!--3- A CEF concederá um crédito especial com juros de 2% aos seus clientes de acordo com o saldo médio no último ano. Fazer um programa em JAVA que leia o saldo médio de um cliente e calcule o valor do crédito de acordo com a tabela a seguir. Imprimir uma mensagem informando o saldo médio e o valor de crédito.-->
+
+    <h1>Saldo Médio e valor de crédito</h1>
+    <script>
+        
+        let saldo_medio = parseFloat(prompt("Informe o seu saldo médio: "))
+        let credito = 0
+
+        if(saldo_medio >= 0 && saldo_medio <= 500) {
+            credito = 0
+        } else if (saldo_medio >= 501 && saldo_medio <= 1000) {
+            credito = saldo_medio * 0.30
+        } else if (saldo_medio >= 1001 && saldo_medio <= 3000) {
+            credito = saldo_medio * 0.40
+        } else if (saldo_medio >= 3001) {
+            credito = saldo_medio * 0.50
+        }
+
+        credito = credito * 1.02
+
+        document.write(`O saldo médio é de ${saldo_medio} e o valor de crédito é de ${credito}.`)
+
+    </script>
+    
+</body>
+</html>

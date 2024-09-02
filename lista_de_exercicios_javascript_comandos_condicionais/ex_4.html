@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comandos Condicionais - Ex 4</title>
+</head>
+<body>
+    <!--4- Dados três valores A, B e C, construa um programa em Javascript, que mostre na tela os valores de forma descendente (do maior para o menor).-->
+    <h1>Valores de forma descendente</h1>
+
+    <script>
+        let valor1 = prompt("Digite o primeiro valor: ")
+        let valor2 = prompt("Digite o segundo valor: ")
+        let valor3 = prompt("Digite o terceiro valor: ")
+
+        if(valor1 > valor2 && valor2 > valor3) {
+            document.write(`Os valores de forma descendente ficam : ${valor1}, ${valor2}, ${valor3}`)
+        } 
+        
+        else if (valor2 > valor1 && valor1 > valor3) {
+            document.write(`Os valores de forma descendente ficam : ${valor2}, ${valor1}, ${valor3}`)
+        } 
+        
+        else if (valor3 > valor1 && valor1 > valor2) {
+            document.write (`Os valores de forma descendente ficam : ${valor3}, ${valor1}, ${valor2}`)
+        } 
+
+        else if (valor2 > valor3 && valor3 > valor1) {
+            document.write (`Os valores de forma descendente ficam : ${valor2}, ${valor3}, ${valor1}`)
+        }
+
+        else if (valor1 > valor3 && valor3 > valor2) {
+            document.write (`Os valores de forma descendente ficam : ${valor1}, ${valor3}, ${valor2}`)
+        }
+        
+        else {
+            document.write (`Os valores de forma descendente ficam : ${valor3}, ${valor2}, ${valor1}`)
+        }
+
+    </script>
+    
+</body>
+</html>
