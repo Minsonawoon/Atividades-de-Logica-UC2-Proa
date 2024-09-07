@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comandos Condicionais - Ex 19</title>
+</head>
+<body>
+
+    <!--19- Elaborar um programa que efetue a apresentação do valor da conversão em real (R$) de um valor lido em dólar (US$). O programa deverá solicitar o valor da cotação do dólar e também a quantidade de dólares disponíveis com o usuário. -->
+    <h1>Conversão de real em dólar</h1>
+    <script>
+        let cotacao_dolar = parseFloat(prompt("Digite a cotação atual do dólar: "));
+        let quantidade_dolares = parseFloat(prompt("Digite a quantidade de dólares que você possui: "));
+        let valor_reais = cotacao_dolar * quantidade_dolares;
+
+      
+        document.write(`Você tem R$ ${valor_reais.toFixed(2)} reais.`);
+    </script>
+</body>
+</html>

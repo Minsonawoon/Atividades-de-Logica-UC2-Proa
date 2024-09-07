@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comandos Condicionais - Ex 10</title>
+</head>
+<body>
+    <!--10- Informar um saldo e mostrar na tela o saldo com reajuste de 1.5%.-->
+    <h1>Saldo com reajuste</h1>
+    <script>
+        let saldo = parseFloat(prompt("Digite o seu saldo: "))
+
+        let reajuste = 1.5 / 100
+
+        let saldo_reajuste = saldo * (1 + reajuste)
+
+        document.write(`O seu saldo com o reajuste é de ${saldo_reajuste.toFixed(2)}`)
+
+    </script>
+    
+</body>
+</html>

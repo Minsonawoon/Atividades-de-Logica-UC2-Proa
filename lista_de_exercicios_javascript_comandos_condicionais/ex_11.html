@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comandos Condicionais - Ex 11</title>
+</head>
+<body>
+    <!--11- Escrever um programa que leia o nome de um vendedor, o seu salário fixo e o total de vendas efetuadas por ele no mês (em dinheiro). Sabendo que este vendedor ganha 15% de comissão sobre suas vendas efetuadas, informar o seu nome, o salário fixo e salário no final do mês. -->
+
+    <h1>Dados do vendedor</h1>
+    <script>
+
+    let nome = prompt("Digite o nome do vendedor: ")
+    let salario_fixo = parseFloat(prompt("Digite o salário fixo: "))
+    let vendas_mes = parseFloat(prompt("Digite a quantidade de vendas efetuadas no mês: "))
+
+    let salario_final = salario_fixo + (vendas_mes * (15/100))
+
+    document.write(`O vendedor(a) ${nome}, tem um salário fixo de ${salario_fixo} e um salário final de ${salario_final.toFixed(2)}`)
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comandos Condicionais - Ex 9</title>
+</head>
+<body>
+    <!--9- Crie um programa que leia o valor do salário mínimo e o valor do salário de um usuário, calcule a quantidade de salários mínimos esse usuário ganha e imprima o resultado. (Salário mínimo = R$1.212,00).-->
+    
+    <h1>Salário</h1>
+    <script>
+        let salario_minimo = 1212.00
+        let salario_usuario = parseFloat(prompt("Digite o valor do seu salário: "))
+
+        let quantidade_salarios = salario_usuario / salario_minimo
+
+        document.write(`Você ganha em torno de ${quantidade_salarios.toFixed(2)} salários mínimos.`)
+    </script>
+</body>
+</html>

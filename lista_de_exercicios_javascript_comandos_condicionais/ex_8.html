@@ -13,8 +13,24 @@
     - o código da peça 2, valor unitário da peça 2, quantidade de peças 2 
     O programa deve calcular o valor total a ser pago e apresentar o resultado. 
     Cálculo : (valor1*quant1 + valor2*quant2)*(IPI/100 + 1)-->
-    <h1>Exercício 8</h1>
+    <h1>Total a ser pago</h1>
+
     <script>
+
+        let ipi_porcentagem = parseFloat(prompt("Digite a porcentagem do IPI que será acrescido nas peças: "))
+
+        let codigo_peca1 = prompt("Digite o código da peça 1: ")
+        let valor_peca1 = parseFloat(prompt("Digite o valor da peça 1: "))
+        let quantidade_peca1 = parseInt(prompt("Digite a quantidade da peça 1: "))
+
+        let codigo_peca2 = prompt("Digite o código da peça 2: ")
+        let valor_peca2 = parseFloat(prompt("Digite o valor da peça 2: "))
+        let quantidade_peca2 = parseInt(prompt("Digite a quantidade da peça 2: "))
+
+        let calculo = ((valor_peca1*quantidade_peca1) + (valor_peca2*quantidade_peca2))*(ipi_porcentagem/100 + 1)
+
+        // Exibe o resultado
+        document.write(`O valor total a ser pago é: R$ ${calculo.toFixed(2)}`);
 
     </script>
 </body>

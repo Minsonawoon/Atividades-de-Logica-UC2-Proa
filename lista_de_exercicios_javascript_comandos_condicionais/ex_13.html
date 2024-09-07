@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comandos Condicionais - Ex 13</title>
+</head>
+<body>
+    <!--13- Ler uma temperatura em graus Celsius e apresentá-la convertida em graus Fahrenheit. A fórmula de conversão é: F=(9*C+160) / 5, sendo F a temperatura em Fahrenheit e C a temperatura em Celsius. -->
+    <h1>Conversão de temperatura</h1>
+    <script>
+        let temperatura_celsius = parseInt(prompt("Digite a temperatura em Celsius: "))
+
+        let conversao_Fahrenheit = (9 * temperatura_celsius + 160) / 5
+
+        document.write(`A temperatura de ${temperatura_celsius}ºC é de ${conversao_Fahrenheit}º em graus Fahrenheit`)
+    </script>
+</body>
+</html>
