@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando troca de conteúdo no Javascript</title>
+
+    <style>
+        body{
+            background-color: rgb(229, 250, 215);
+            color: rgb(59, 39, 39);
+            text-align: center;
+        }
+
+        .myImage{
+            width: 500px;
+            height: 380px;
+            margin: auto;
+        }
+
+    </style>
+</head>
+<body class="fundo">
+
+    <h1>Testando mudança de cor de fundo Body, a cor da fonte e a imagem da página</h1>
+
+    <input type="button" id="original" value="cor original" onclick="original()"/>
+    <input type="button" id="verde" value="cor verde" onclick="verde()"/>
+    <input type="button" id="azul" value="cor azul" onclick="azul()"/>
+
+    <hr />
+
+    <img src="imagens/fundo1.jpg" class="myImage"/>
+
+    <script>
+        function verde(){
+            document.querySelector(".fundo").style.backgroundColor="green";
+            document.querySelector(".fundo").style.color = "white";
+            document.querySelector(".myImage").src="imagens/fundo2.jpg";
+        }
+
+        function azul(){
+            document.querySelector(".fundo").style.backgroundColor="blue";
+            document.querySelector(".fundo").style.color = "yellow";
+            document.querySelector(".myImage").src="imagens/fundo3.jpg";
+        }
+
+        function original(){
+            document.querySelector(".fundo").style.backgroundColor="antiquewhite";
+            document.querySelector(".fundo").style.color = "rgb(59, 39, 39)";
+            document.querySelector(".myImage").src="imagens/fundo1.jpg";
+        }
+    </script>
+    
+</body>
+</html>

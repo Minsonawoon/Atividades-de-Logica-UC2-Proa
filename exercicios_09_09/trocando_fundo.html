@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trocando fundo</title>
+
+    <style>
+        body{
+            text-align: center;
+        }
+
+        .myImage{
+            width: 500px;
+            height: 380px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body class="fundo">
+
+    <h1 id="titulo">Testando mudança de cor de fundo Body, a cor da fonte e a imagem da página</h1>
+
+    <p id="texto">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium tempore veniam illum porro excepturi quisquam alias natus sed temporibus vitae! Magnam, ab voluptatem doloribus culpa aperiam quod eius id nulla! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium tempore veniam illum porro excepturi quisquam alias natus sed temporibus vitae! Magnam, ab voluptatem doloribus culpa aperiam quod eius id nulla! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium tempore veniam illum porro excepturi quisquam alias natus sed temporibus vitae! Magnam, ab voluptatem doloribus culpa aperiam quod eius id nulla!</p>
+
+    <input type="button" id="modo_escuro" value="modo escuro" onclick="modo_escuro()"/>
+    <input type="button" id="modo_daltônico" value="modo daltônico" onclick="modo_daltônico()"/>
+    <input type="button" id="original" value="modo normal" onclick="original()"/>
+    <input type="button" id="maior" value="A+" onclick="maior()"/>
+
+    <hr />
+
+    <img src="imagens/fundo1.jpg" class="myImage" />
+
+    <p id="texto2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium tempore veniam illum porro excepturi quisquam alias natus sed temporibus vitae! Magnam, ab voluptatem doloribus culpa aperiam quod eius id nulla! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium tempore veniam illum porro excepturi quisquam alias natus sed temporibus vitae! Magnam, ab voluptatem doloribus culpa aperiam quod eius id nulla! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium tempore veniam illum porro excepturi quisquam alias natus sed temporibus vitae! Magnam, ab voluptatem doloribus culpa aperiam quod eius id nulla!</p>
+
+    <script>
+
+        let header = document.getElementById("titulo")
+
+        function modo_escuro(){
+            document.querySelector(".fundo").style.backgroundColor="black";
+            document.querySelector(".fundo").style.color = "rgb(216, 216, 216)";
+            document.querySelector(".myImage").style.filter = "grayscale(0%)";
+            document.querySelector("#texto").style.fontSize = "16px";
+            document.querySelector("#texto2").style.fontSize = "16px";
+            document.querySelector("#titulo").style.fontSize = "25px";
+            header.innerHTML="Testando o modo escuro";
+        }
+
+        function modo_daltônico(){
+            document.querySelector(".fundo").style.backgroundColor="rgb(215, 127, 250)";
+            document.querySelector(".fundo").style.color = "rgb(151, 253, 83)";
+            document.querySelector(".myImage").style.filter = "grayscale(96%)";
+            document.querySelector("#texto").style.fontSize = "16px";
+            document.querySelector("#texto2").style.fontSize = "16px";
+            document.querySelector("#titulo").style.fontSize = "25px";
+            header.innerHTML="Testando o modo daltônico"
+        }
+
+        function original(){
+            document.querySelector(".fundo").style.backgroundColor="white";
+            document.querySelector(".fundo").style.color = "black";
+            document.querySelector(".myImage").src="imagens/fundo1.jpg";
+            document.querySelector(".myImage").style.filter = "grayscale(0%)";
+            document.querySelector("#texto").style.fontSize = "16px";
+            document.querySelector("#texto2").style.fontSize = "16px";
+            document.querySelector("#titulo").style.fontSize = "25px";
+            header.innerHTML="Testando mudança de cor de fundo Body, a cor da fonte e a imagem da página";
+        }
+
+        function maior(){
+            document.querySelector(".fundo").style.backgroundColor="white";
+            document.querySelector(".fundo").style.color = "black";
+            document.querySelector(".myImage").src="imagens/fundo1.jpg";
+            document.querySelector("#texto").style.fontSize = "30px";
+            document.querySelector("#texto2").style.fontSize = "30px";
+            document.querySelector("#titulo").style.fontSize = "40px";
+            document.querySelector(".myImage").style.filter = "grayscale(0%)";
+            header.innerHTML="Testando o modo baixa visão";
+        }
+    </script>
+
+    
+</body>
+</html>
