@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 10</title>
+</head>
+<body>
+    <h2>10 - Escreva um programa para imprimir todas as tabuadas de 1 a N. N será informado pelo usuário.</h2>
+    <script>
+        let n = Number(prompt("Digite um valor: "))
+
+        for(let i = 1; i <= n; i++){
+            for(let multiplica = 0; multiplica <= 10; multiplica++){
+                document.write(`${i} X ${multiplica} = ${i*multiplica}<br />`)
+            }
+            document.write("<br />")
+        }
+    </script>
+</body>
+</html>

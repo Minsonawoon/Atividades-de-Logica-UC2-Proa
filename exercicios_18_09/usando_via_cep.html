@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Implementando o uso da API VIACEP</title>
+
+    <!-- Adicionando Javascript -->
+    <script>
+        function limpa_formulário_cep() {
+            document.getElementById('rua').value = ("");
+            document.getElementById('bairro').value = ("");
+            document.getElementById('cidade').value = ("");
+            document.getElementById('uf').value = ("");
+            document.getElementById('estado').value = ("");
+            document.getElementById('naturalidade').value = ("");
+        }
+
+        function meu_callback(conteudo) {
+            if (!("erro" in conteudo)) {
+                document.getElementById('rua').value = (conteudo.logradouro);
+                document.getElementById('bairro').value = (conteudo.bairro);
+                document.getElementById('cidade').value = (conteudo.localidade);
+                document.getElementById('uf').value = (conteudo.uf);
+                document.getElementById('estado').value = (conteudo.estado);
+
+                // Exibir o gentílico automaticamente
+                naturalidade(conteudo.uf);
+            } else {
+                limpa_formulário_cep();
+                alert("CEP não encontrado.");
+            }
+        }
+
+        function pesquisacep(valor) {
+            var cep = valor.replace(/\D/g, '');
+
+            if (cep != "") {
+                var validacep = /^[0-9]{8}$/;
+
+                if (validacep.test(cep)) {
+                    document.getElementById('rua').value = "...";
+                    document.getElementById('bairro').value = "...";
+                    document.getElementById('cidade').value = "...";
+                    document.getElementById('uf').value = "...";
+                    document.getElementById('estado').value = "...";
+                    document.getElementById('naturalidade').value = "...";
+
+                    var script = document.createElement('script');
+                    script.src = 'https://viacep.com.br/ws/' + cep + '/json/?callback=meu_callback';
+                    document.body.appendChild(script);
+                } else {
+                    limpa_formulário_cep();
+                    alert("Formato de CEP inválido.");
+                }
+            } else {
+                limpa_formulário_cep();
+            }
+        }
+
+        function naturalidade(uf) {
+            switch (uf) {
+                case "AC":
+                    document.getElementById("naturalidade").value = "Acreano";
+                    break;
+                case "AL":
+                    document.getElementById("naturalidade").value = "Alagoano";
+                    break;
+                case "AP":
+                    document.getElementById("naturalidade").value = "Amapaense";
+                    break;
+                case "AM":
+                    document.getElementById("naturalidade").value = "Amazonense";
+                    break;
+                case "BA":
+                    document.getElementById("naturalidade").value = "Baiano";
+                    break;
+                case "CE":
+                    document.getElementById("naturalidade").value = "Cearense";
+                    break;
+                case "DF":
+                    document.getElementById("naturalidade").value = "Brasiliense";
+                    break;
+                case "ES":
+                    document.getElementById("naturalidade").value = "Capixaba";
+                    break;
+                case "GO":
+                    document.getElementById("naturalidade").value = "Goiano";
+                    break;
+                case "MA":
+                    document.getElementById("naturalidade").value = "Maranhense";
+                    break;
+                case "MT":
+                    document.getElementById("naturalidade").value = "Mato Grossense";
+                    break;
+                case "MS":
+                    document.getElementById("naturalidade").value = "Sul Mato Grossense";
+                    break;
+                case "MG":
+                    document.getElementById("naturalidade").value = "Mineiro";
+                    break;
+                case "PA":
+                    document.getElementById("naturalidade").value = "Paraense";
+                    break;
+                case "PB":
+                    document.getElementById("naturalidade").value = "Paraibano";
+                    break;
+                case "PR":
+                    document.getElementById("naturalidade").value = "Paranaense";
+                    break;
+                case "PE":
+                    document.getElementById("naturalidade").value = "Pernambucano";
+                    break;
+                case "PI":
+                    document.getElementById("naturalidade").value = "Piauiense";
+                    break;
+                case "RJ":
+                    document.getElementById("naturalidade").value = "Fluminense";
+                    break;
+                case "RN":
+                    document.getElementById("naturalidade").value = "Potiguar";
+                    break;
+                case "RO":
+                    document.getElementById("naturalidade").value = "Rondoniano";
+                    break;
+                case "RR":
+                    document.getElementById("naturalidade").value = "Roraimense";
+                    break;
+                case "RS":
+                    document.getElementById("naturalidade").value = "Gaúcho";
+                    break;
+                case "SC":
+                    document.getElementById("naturalidade").value = "Catarinense";
+                    break;
+                case "SP":
+                    document.getElementById("naturalidade").value = "Paulista";
+                    break;
+                case "SE":
+                    document.getElementById("naturalidade").value = "Sergipano";
+                    break;
+                case "TO":
+                    document.getElementById("naturalidade").value = "Tocantinense";
+                    break;
+                default:
+                    document.getElementById("naturalidade").value = "Estado ou CEP Inválido";
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <form method="get" action=".">
+        <label> Nome:
+            <input name="nome" type="text" id="nome" value="" size="50" max="150" required> </label><br />
+        <label> Data de Nascimento:
+            <input name="dataNasc" type="date" id="dataNasc" value="" size="30" required> </label><br />
+        <label> Nº de CPF:
+            <input name="cpf" type="text" id="cpf" value="" size="30" required> </label><br />
+        <label>Cep:
+            <input name="cep" type="text" id="cep" value="" size="10" maxlength="9" required
+                onblur="pesquisacep(this.value); " /></label><br />
+        <label>Número:
+            <input name="numeroEndereco" type="text" id="numeroEndereco" /></label><br />
+        <label>Complemento:
+            <input name="complemento" type="text" id="complemento" /></label><br />
+        <label>Rua:
+            <input name="rua" type="text" id="rua" size="100" /></label><br />
+        <label>Bairro:
+            <input name="bairro" type="text" id="bairro" size="100" /></label><br />
+        <label>Cidade:
+            <input name="cidade" type="text" id="cidade" size="100" /></label><br />
+        <label>UF:
+            <input name="uf" type="text" id="uf" size="2" value="" /></label><br />
+
+        <label>Estado:
+            <input name="estado" type="text" id="estado" value="" disabled /></label><br />
+
+        <label>Gentílico do CEP:
+            <input name="naturalidade" type="text" id="naturalidade" value="" disabled /></label><br />
+    </form>
+
+</body>
+
+</html>

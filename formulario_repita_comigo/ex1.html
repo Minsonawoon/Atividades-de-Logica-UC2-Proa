@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 1</title>
+</head>
+<body>
+    <h2>1 - Escreva um algoritmo para ler 2 valores informados pelo usuário e se o segundo valor informado for igual ou menor que ZERO, deve ser lido um novo valor. Ou seja, para o segundo valor não pode ser aceito o valor zero, nem um valor negativo.  O seu programa deve imprimir o resultado da divisão do primeiro valor lido pelo segundo valor.</h2>
+    <script>
+        let valor1 = Number(prompt("Digite o primeiro valor: "))
+        let valor2 = Number(prompt("Digite o segundo valor: "))
+
+        while (valor2 <= 0) {
+            valor2 = Number(prompt("Digite um valor maior que 0 e positivo: "));
+        }
+
+        document.write(`O resultado da divisão é: ${valor1 / valor2}`);
+    </script>
+    
+</body>
+</html>
