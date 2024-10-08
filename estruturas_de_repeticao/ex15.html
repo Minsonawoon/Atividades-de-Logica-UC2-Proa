@@ -3,26 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ex 9</title>
+    <title>Ex15</title>
 </head>
 <body>
-    <h1>9) Crie um programa que leia o nome e a idade de 5 pessoas usando o loop "while" e exiba a média das idades.</h1>
-
+    <h2>15) Crie um programa que leia o nome e a idade de várias pessoas usando o loop "while" até que o nome "fim" seja informado. Ao final, exiba a média das idades.</h2>
     <script>
         let cont = 0
         let soma = 0
 
-        while(cont < 5){
+        while(true){
             let nome = prompt("Digite um nome: ")
+            if(nome.toLowerCase() === "fim"){
+                break
+            }
+    
             let idade = parseInt(prompt("Digite uma idade: "))
-            cont++
             soma += idade
+            cont++
         }
 
         let media = soma / cont
-
-        document.write(`A média é de: ${media}`)
-
+        document.write(`A média é de: ${media.toFixed(2)}`)
+       
     </script>
     
 </body>

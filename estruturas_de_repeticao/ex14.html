@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 14</title>
+</head>
+<body>
+    <h2>14) Escreva um programa que calcule o fatorial de um número inteiro inserido pelo usuário usando o loop "while".</h2>
+    <script>
+        let num = parseInt(prompt("Digite um número maior que 0 para saber o fatorial: "))
+        let cont = num
+        let fatorial = 1
+
+        if(num < 0) {
+            console.log("Não há fatorial de números negativos.")
+        } else {
+            while(cont > 0){
+                fatorial *= cont
+                cont--
+            }
+        }
+
+        document.write(`O fatorial de ${num} é: ${fatorial}`)
+    </script>
+    
+</body>
+</html>
