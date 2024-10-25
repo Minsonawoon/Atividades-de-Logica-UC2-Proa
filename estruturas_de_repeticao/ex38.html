@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 38</title>
+</head>
+<body>
+    <h2>38 - Escreva um programa que leia um número inteiro e exiba a sequência de Fibonacci até o número lido.</h2>
+    <script>
+        let numero = parseInt(prompt("Digite um número: "))
+        let numero2 = 1
+        let contador = 0
+
+        for(let numero1 = 1; numero1 <= numero; contador++){
+            document.write(`${numero1}<br>`)
+            let proximo = numero1 + numero2
+            numero1 = numero2
+            numero2 = proximo
+        }
+    </script>
+</body>
+</html>

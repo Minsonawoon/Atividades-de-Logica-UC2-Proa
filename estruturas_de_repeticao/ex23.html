@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 23</title>
+</head>
+<body>
+
+    <h2>23 - Escreva um programa que leia um número inteiro e exiba a sequência de Fibonacci até o número lido usando o loop "do-while".</h2>
+    <script>
+        let numero = parseInt(prompt("Digite um número: "))
+        let numero1 = 1
+        let numero2 = 1
+        let contador = 0
+
+        do{
+            document.write(`${numero1}<br>`)
+            let proximo = numero1 + numero2
+            numero1 = numero2
+            numero2 = proximo
+            contador++
+            
+        }while(numero1 <= numero)
+    </script>
+    
+</body>
+</html>

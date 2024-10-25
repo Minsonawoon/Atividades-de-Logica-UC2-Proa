@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 41</title>
+</head>
+<body>
+
+    <h2>41 - Escreva um programa que leia um número inteiro e exiba a soma de todos os números pares entre 1 e o número lido.</h2>
+    <script>
+        let numero = parseInt(prompt("Digite um número: "))
+        let soma = 0
+
+        for(let cont = 1; cont <= numero; cont++){
+            if(cont % 2 === 0){
+                soma += cont
+            }
+        }
+
+        document.write(soma)
+    </script>
+    
+</body>
+</html>

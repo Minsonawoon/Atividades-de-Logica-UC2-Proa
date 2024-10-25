@@ -3,23 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ex 7</title>
+    <title>Ex 37</title>
 </head>
 <body>
-    <h1>7 - Faça um programa que leia um número inteiro e exiba se ele é um número primo usando o loop "while".</h1>
+
+    <h2>37 - Faça um programa que leia um número inteiro e exiba se ele é um número primo.</h2>
     <script>
         let numero = Number(prompt("Digite um número: "))
-        let contador = 1
         let divisor = 0
 
         if(numero <= 1){
             document.write("Não é um número primo");
         } else {
-            while(contador <= numero){
+            for(let contador = 1; contador <= numero; contador++){
                 if (numero % contador === 0){
                     divisor++;
                 }
-                contador++; 
             }
 
             if(divisor === 2){ 
@@ -28,7 +27,6 @@
                 document.write(`${numero} não é um número primo.`);
             }
         }
-        
     </script>
     
 </body>

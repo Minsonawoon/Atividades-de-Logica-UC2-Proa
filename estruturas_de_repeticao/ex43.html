@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 43</title>
+</head>
+<body>
+    <h2>43 - Faça um programa que leia um número inteiro e exiba os seus dígitos separadamente.</h2>
+    <script>
+        let numero = parseInt(prompt("Digite um número: "));
+        let resultado = "";
+        let numeroOriginal = numero; 
+
+        for (; numeroOriginal > 0; numeroOriginal = Math.floor(numeroOriginal / 10)) {
+            let digito = numeroOriginal % 10;
+            resultado = digito + " " + resultado;
+        }
+
+        document.write(resultado);
+
+    </script>
+</body>
+</html>
