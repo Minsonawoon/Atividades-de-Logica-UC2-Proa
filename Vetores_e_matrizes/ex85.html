@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 85</title>
+</head>
+<body>
+
+    <h2>85 - Escreva um programa que leia 5 números inteiros e exiba o maior e o menor valor digitado.</h2>
+    <script>
+        let numeros = [];
+
+        for (let cont = 1; cont <= 5; cont++) {
+            let numero = parseInt(prompt(`Digite um número inteiro: `));
+            numeros.push(numero);
+        }
+
+        let maior = Math.max(...numeros);
+        let menor = Math.min(...numeros);
+
+        document.write(`O maior número digitado é ${maior} e o menor é ${menor}.`);
+    </script>
+    
+</body>
+</html>

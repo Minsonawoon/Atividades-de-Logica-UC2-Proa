@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 81</title>
+</head>
+<body>
+
+    <h2>81 - Faça um programa que leia 5 números inteiros e exiba-os na ordem inversa em que foram digitados.</h2>
+    <script>
+        let numeros = []
+
+        for(let cont = 0; cont < 5; cont++){
+            let numero = parseInt(prompt("Digite um número: "))
+            numeros.push(numero)
+        }
+
+        document.write("Os números na ordem inversa são: <br/>")
+        for(let cont = numeros.length - 1; cont >= 0; cont--){
+            document.write(`${numeros[cont]}<br /> `)
+        }
+    </script>
+    
+</body>
+</html>

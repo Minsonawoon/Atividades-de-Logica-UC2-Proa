@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 88</title>
+</head>
+<body>
+    <h2>88 - Escreva um programa que leia 5 números inteiros e calcule a média dos valores pares e a média dos valores ímpares.</h2>
+    <script>
+        let numeros = [];
+
+        for (let cont= 1; cont <= 5; cont++) {
+            let numero = parseInt(prompt(`Digite um número inteiro: `));
+            numeros.push(numero);
+        }
+
+        let somaPares = 0;
+        let somaImpares = 0;
+        let pares = 0;
+        let impares = 0;
+
+        for (let cont = 0; cont < numeros.length; cont++) {
+            if (numeros[cont] % 2 === 0) { 
+                somaPares += numeros[cont];
+                pares++;
+            } else { 
+                somaImpares += numeros[cont];
+                impares++;
+            }
+        }
+
+        let mediaPares = pares > 0 ? somaPares / pares : 0;
+        let mediaImpares = impares > 0 ? somaImpares / impares : 0;
+
+        document.write(`Média dos números pares: ${mediaPares}.<br />Média dos números ímpares: ${mediaImpares}`);
+
+    </script>
+</body>
+</html>

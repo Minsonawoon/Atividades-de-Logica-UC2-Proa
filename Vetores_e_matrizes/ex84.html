@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 84</title>
+</head>
+<body>
+    <h2>84 - Faça um programa que leia 5 números inteiros e exiba quantos deles são pares.</h2>
+    <script>
+        let numeros = []
+
+        for(let cont = 1; cont <= 5; cont++){
+            let numero = parseInt(prompt("Digite um número: "))
+            numeros.push(numero)
+        }
+
+        let Pares = numeros.filter(numero => numero % 2 === 0).length;
+
+        document.write(`A quantidade de números pares são: ${Pares}`)
+    </script>
+</body>
+</html>

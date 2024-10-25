@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 82</title>
+</head>
+<body>
+
+    <h2>82 - Escreva um programa que leia 10 números inteiros e exiba a soma deles.</h2>
+
+    <script>
+        let numeros = []
+
+        for(let cont = 1; cont <= 10; cont++){
+            let numero = parseInt(prompt("Digite um número: "))
+            numeros.push(numero)
+        }
+
+        let soma = numeros.reduce((acc, curr) => acc + curr, 0);
+
+        document.write(`A soma dos números digitados é: ${soma}`);
+    </script>
+    
+</body>
+</html>

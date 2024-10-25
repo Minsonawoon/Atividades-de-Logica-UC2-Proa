@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 87</title>
+</head>
+<body>
+    <h2>87 - Faça um programa que leia 10 números inteiros e exiba quantos deles são positivos.</h2>
+    <script>
+        let numeros = [];
+
+        for (let cont = 1; cont <= 10; cont++) {
+            let numero = parseInt(prompt(`Digite um número inteiro:`));
+            numeros.push(numero);
+        }
+
+        let positivos = numeros.filter(numero => numero > 0).length;
+
+        document.write(`Quantidade de números positivos: ${positivos}`);
+
+    </script>
+</body>
+</html>
