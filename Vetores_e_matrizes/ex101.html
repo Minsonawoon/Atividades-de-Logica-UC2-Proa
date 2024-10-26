@@ -8,7 +8,25 @@
 <body>
     <h2>101) Crie um programa que leia uma matriz 4x4 de números inteiros e exiba a média aritmética dos elementos.</h2>
     <script>
-        
+        let matriz = [];
+        let soma = 0;
+        let totalElementos = 4 * 4; 
+
+        for (let i = 0; i < 4; i++) {
+            matriz[i] = [];
+            for (let j = 0; j < 4; j++) {
+                let numero = parseInt(prompt(`Digite o número para a posição:`));
+                matriz[i][j] = numero;
+                soma += numero; 
+            }
+        }
+
+        let media = soma / totalElementos;
+
+        matriz.forEach((linha) => {
+            document.write(linha.join);
+        });
+        document.write(`Média aritmética dos elementos: ${media.toFixed(2)}`);
     </script>
 </body>
 </html>

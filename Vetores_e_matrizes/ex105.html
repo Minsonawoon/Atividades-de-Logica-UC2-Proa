@@ -8,7 +8,25 @@
 <body>
     <h2>105) Faça um programa que leia uma matriz 4x4 de números inteiros e exiba a soma dos elementos de cada coluna.</h2>
     <script>
-        
+        let matriz = [];
+        let somaColunas = [0, 0, 0, 0]; 
+
+        for (let i = 0; i < 4; i++) {
+            matriz[i] = [];
+            for (let j = 0; j < 4; j++) {
+                let numero = parseInt(prompt(`Digite o número para a posição:`));
+                matriz[i][j] = numero;
+                somaColunas[j] += numero; 
+            }
+        }
+
+        matriz.forEach((linha) => {
+            document.write(linha);
+        });
+
+        somaColunas.forEach((soma, index) => {
+            document.write(`Soma da coluna ${index + 1}: ${soma}<br>`);
+        });
     </script>
 </body>
 </html>

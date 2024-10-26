@@ -8,7 +8,21 @@
 <body>
     <h2>94 - Escreva um programa que leia 7 números inteiros e exiba apenas os números pares.</h2>
     <script>
+        let numeros = []
+        let pares = []
 
+        for(let cont = 1; cont <= 7; cont++){
+            let numero = parseInt(prompt("Digite um número: "))
+            numeros.push(numero)
+        }
+
+        for(let cont = 0; cont < numeros.length; cont++){
+            if(numeros[cont] % 2 === 0){
+                pares.push(numeros[cont])
+            }
+        }
+
+        document.write(`Os números pares são: ${pares}`)
     </script>
 </body>
 </html>

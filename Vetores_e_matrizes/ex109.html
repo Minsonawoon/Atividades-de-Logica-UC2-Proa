@@ -8,7 +8,47 @@
 <body>
     <h2>109) Escreva um programa que leia uma matriz 3x3 de números inteiros e verifique se ela é uma matriz identidade.</h2>
     <script>
-        
+        let matriz = [];
+        let identidade = true;
+
+        for (let i = 0; i < 3; i++) {
+            matriz[i] = [];
+            for (let j = 0; j < 3; j++) {
+                let numero = parseInt(prompt(`Digite o número para a posição:`));
+                matriz[i][j] = numero;
+            }
+        }
+
+        for (let i = 0; i < 3; i++) {
+            for (let j = 0; j < 3; j++) {
+                if (i === j) {
+
+                    if (matriz[i][j] !== 1) {
+                        identidade = false;
+                        break; 
+                    }
+                } else {
+                    if (matriz[i][j] !== 0) {
+                        identidade = false;
+                        break; 
+                    }
+                }
+            }
+            if (!identidade) {
+                break; 
+            }
+        }
+
+
+        matriz.forEach((linha) => {
+            document.write(linha);
+        });
+
+        if (identidade) {
+            document.write("A matriz é uma matriz identidade.");
+        } else {
+            document.write("A matriz não é uma matriz identidade.");
+        }
     </script>
 </body>
 </html>

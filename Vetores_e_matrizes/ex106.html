@@ -8,7 +8,51 @@
 <body>
     <h2>106) Escreva um programa que leia duas matrizes 2x2 de números inteiros e verifique se elas são iguais.</h2>
     <script>
-        
+        let matriz1 = [];
+        let matriz2 = [];
+        let iguais = true; 
+
+        for (let i = 0; i < 2; i++) {
+            matriz1[i] = [];
+            for (let j = 0; j < 2; j++) {
+                let numero = parseInt(prompt(`Digite o número para a posição da primeira matriz:`));
+                matriz1[i][j] = numero;
+            }
+        }
+
+        for (let i = 0; i < 2; i++) {
+            matriz2[i] = [];
+            for (let j = 0; j < 2; j++) {
+                let numero = parseInt(prompt(`Digite o número para a posição da segunda matriz:`));
+                matriz2[i][j] = numero;
+            }
+        }
+
+        for (let i = 0; i < 2; i++) {
+            for (let j = 0; j < 2; j++) {
+                if (matriz1[i][j] !== matriz2[i][j]) {
+                    iguais = false;
+                    break; 
+                }
+            }
+            if (!iguais) {
+                break; 
+            }
+        }
+
+        matriz1.forEach((linha) => {
+            document.write(linha + "<br>");
+        });
+
+        matriz2.forEach((linha) => {
+            document.write(linha + "<br>");
+        });
+
+        if (iguais) {
+            document.write("As matrizes são iguais.");
+        } else {
+            document.write("As matrizes não são iguais.");
+        }
     </script>
 </body>
 </html>

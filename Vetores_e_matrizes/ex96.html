@@ -8,7 +8,19 @@
 <body>
     <h2>96 - Faça um programa que leia uma matriz 3x3 de números inteiros e exiba a matriz na tela.</h2>
     <script>
-        
+        let matriz = [];
+
+        for(let i = 0; i < 3; i++) {
+            matriz[i] = [];  
+            for(let j = 0; j < 3; j++) {
+                let numero = parseInt(prompt(`Digite o número para a posição:`));
+                matriz[i][j] = numero;
+            }
+        }
+
+        for(let i = 0; i < 3; i++) {
+            document.write(matriz[i].join(" ") + "<br>");
+        }
     </script>
 </body>
 </html>

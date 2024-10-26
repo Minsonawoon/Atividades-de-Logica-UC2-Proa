@@ -8,7 +8,31 @@
 <body>
     <h2>103) Escreva um programa que leia uma matriz 3x3 de números inteiros e exiba o menor valor presente na matriz.</h2>
     <script>
-        
+        let matriz = [];
+        let menorValor;
+
+        for (let i = 0; i < 3; i++) {
+            matriz[i] = [];
+            for (let j = 0; j < 3; j++) {
+                let numero = parseInt(prompt(`Digite o número para a posição:`));
+                matriz[i][j] = numero;
+            }
+        }
+
+        menorValor = matriz[0][0];
+
+        for (let linha of matriz) {
+            linha.forEach((valor) => {
+                if (valor < menorValor) {
+                    menorValor = valor;
+                }
+            });
+        }
+
+        matriz.forEach((linha) => {
+            document.write(linha.join(" ") + "<br>");
+        });
+        document.write(`Menor valor na matriz: ${menorValor}`);
     </script>
 </body>
 </html>

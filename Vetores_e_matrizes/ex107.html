@@ -8,7 +8,26 @@
 <body>
     <h2>107) Crie um programa que leia uma matriz 3x3 de números inteiros e exiba o produto dos elementos da diagonal secundária.</h2>
     <script>
-        
+        let matriz = [];
+        let produtoDiagonalSecundaria = 1; 
+
+        for (let i = 0; i < 3; i++) {
+            matriz[i] = [];
+            for (let j = 0; j < 3; j++) {
+                let numero = parseInt(prompt(`Digite o número para a posição:`));
+                matriz[i][j] = numero;
+            }
+        }
+
+        for (let i = 0; i < 3; i++) {
+            produtoDiagonalSecundaria *= matriz[i][2 - i];
+        }
+
+        matriz.forEach((linha) => {
+            document.write(linha);
+        });
+
+        document.write(`Produto dos elementos da diagonal secundária: ${produtoDiagonalSecundaria}`);
     </script>
 </body>
 </html>

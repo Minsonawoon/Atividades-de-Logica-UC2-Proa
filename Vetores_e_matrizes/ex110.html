@@ -8,7 +8,44 @@
 <body>
     <h2>110) Crie um programa que leia duas matrizes 2x2 de números inteiros e exiba a subtração entre elas.</h2>
     <script>
-        
+        let matriz1 = [];
+        let matriz2 = [];
+        let resultado = []; 
+
+        for (let i = 0; i < 2; i++) {
+            matriz1[i] = [];
+            for (let j = 0; j < 2; j++) {
+                let numero = parseInt(prompt(`Digite o número para a posição da primeira matriz:`));
+                matriz1[i][j] = numero;
+            }
+        }
+
+        for (let i = 0; i < 2; i++) {
+            matriz2[i] = [];
+            for (let j = 0; j < 2; j++) {
+                let numero = parseInt(prompt(`Digite o número para a posição da segunda matriz:`));
+                matriz2[i][j] = numero;
+            }
+        }
+
+        for (let i = 0; i < 2; i++) {
+            resultado[i] = []; 
+            for (let j = 0; j < 2; j++) {
+                resultado[i][j] = matriz1[i][j] - matriz2[i][j]; 
+            }
+        }
+
+        matriz1.forEach((linha) => {
+            document.write(linha);
+        });
+
+        matriz2.forEach((linha) => {
+            document.write(linha);
+        });
+
+        resultado.forEach((linha) => {
+            document.write(linha);
+        });
     </script>
 </body>
 </html>

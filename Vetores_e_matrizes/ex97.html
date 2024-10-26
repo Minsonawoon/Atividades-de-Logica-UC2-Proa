@@ -8,7 +8,22 @@
 <body>
     <h2>97) Escreva um programa que leia uma matriz 2x2 de números inteiros e calcule a soma de todos os elementos.</h2>
     <script>
-        
+        let matriz = [];
+        let soma = 0;
+
+        for(let i = 0; i < 2; i++) {
+            matriz[i] = [];  
+            for(let j = 0; j < 2; j++) {
+                let numero = parseInt(prompt(`Digite o número para a posição:`));
+                matriz[i][j] = numero;
+                soma += numero;  
+            }
+        }
+
+        for(let i = 0; i < 2; i++) {
+            document.write(matriz[i]);
+        }
+        document.write(`Soma dos elementos: ${soma}`);
     </script>
 </body>
 </html>

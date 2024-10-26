@@ -8,7 +8,34 @@
 <body>
     <h2>108)Faça um programa que leia uma matriz 4x4 de números inteiros e exiba o maior valor presente em cada linha.</h2>
     <script>
-        
+        let matriz = [];
+        let maiores = []; 
+
+        for (let i = 0; i < 4; i++) {
+            matriz[i] = [];
+            for (let j = 0; j < 4; j++) {
+                let numero = parseInt(prompt(`Digite o número para a posição:`));
+                matriz[i][j] = numero;
+            }
+        }
+
+        for (let i = 0; i < 4; i++) {
+            let maior = matriz[i][0]; 
+            for (let j = 1; j < 4; j++) {
+                if (matriz[i][j] > maior) {
+                    maior = matriz[i][j]; 
+                }
+            }
+            maiores[i] = maior; 
+        }
+
+        matriz.forEach((linha) => {
+            document.write(linha);
+        });
+
+        maiores.forEach((maior, index) => {
+            document.write(`Maior valor da linha ${index + 1}: ${maior}<br>`);
+        });
     </script>
 </body>
 </html>

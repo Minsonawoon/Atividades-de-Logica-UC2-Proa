@@ -8,7 +8,30 @@
 <body>
     <h2>100) Escreva um programa que leia uma matriz 3x3 de números inteiros e exiba o maior valor presente na matriz.</h2>
     <script>
-        
+        let matriz = [];
+
+        for (let i = 0; i < 3; i++) {
+            matriz[i] = [];
+            for (let j = 0; j < 3; j++) {
+                let numero = parseInt(prompt(`Digite o número para a posição:`));
+                matriz[i][j] = numero;
+            }
+        }
+
+        let maiorValor = matriz[0][0];
+
+        for (let linha of matriz) {
+            linha.forEach((valor) => {
+                if (valor > maiorValor) {
+                    maiorValor = valor;
+                }
+            });
+        }
+
+        matriz.forEach((linha) => {
+            document.write(linha);
+        });
+        document.write(`Maior valor na matriz: ${maiorValor}`);
     </script>
 </body>
 </html>

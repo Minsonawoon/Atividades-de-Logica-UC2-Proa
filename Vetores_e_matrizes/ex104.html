@@ -8,7 +8,26 @@
 <body>
     <h2>104) Crie um programa que leia uma matriz 3x3 de números inteiros e verifique se ela é simétrica (igual à sua transposta).</h2>
     <script>
-        
+        let matriz = [];
+        let simetrica = true; 
+
+        for (let i = 0; i < 3; i++) {
+            matriz[i] = [];
+            for (let j = 0; j < 3; j++) {
+                let numero = parseInt(prompt(`Digite o número para a posição:`));
+                matriz[i][j] = numero;
+            }
+        }
+
+        matriz.forEach((linha) => {
+            document.write(linha.join(" ") + "<br>");
+        });
+
+        if (simetrica) {
+            document.write("<h3>A matriz é simétrica.</h3>");
+        } else {
+            document.write("<h3>A matriz não é simétrica.</h3>");
+        }
     </script>
 </body>
 </html>
